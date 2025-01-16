@@ -1,57 +1,233 @@
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="https://steelheadfly.github.io/personal/main.js"></script>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: "Parkinsans", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 300;
-      font-style: normal;
-      font-size: 24px;
-      height: 100%;
-      overflow-y: none;
-      position: relative;
-      text-align: center;
-    }
-    header {
-      position: absolute;
-      width: 100%;
-      height: 2.5em;
-    }
-    main {
-      position: absolute;
-      width: 100%;
-      top: 2.5em;
-      bottom: 2rem;
-      overflow-y: scroll;
-      overflow-x: none;
-    }
-    footer {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      height: 2em;
-      overflow-y: none;
-    }
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aslin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+    <style>:root{font-family:Inter,system-ui,Avenir,Helvetica,Arial,sans-serif;background-color:#fff;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}*{margin:0;padding:0;box-sizing:border-box}body{overflow-y:scroll}#app{max-width:62em;margin:auto;background:#000;min-height:100vh;box-shadow:0 0 3em #000;color:#ffffff80}#app a{text-decoration:inherit;cursor:pointer;color:#fff}#app li{color:#fff}h1{font-size:4.1em;line-height:.9;font-weight:400}h2{font-size:2.56em;line-height:1;font-weight:400}h3{font-size:1.6em;line-height:1.6em}h4{font-size:1em;line-height:1.6em}h5{font-size:.8em;text-transform:uppercase;line-height:1.6em}p{font-size:1em;margin-bottom:1.6em;line-height:1.6em}h1,h2,h3,h4{color:#fff}h5{color:#ffffff80}@media screen and (max-width: 900px){body{font-size:14px}}@media screen and (min-width: 1200px){body{font-size:18px}}@media screen and (min-width: 1500px){body{font-size:24px}}@media screen and (min-width: 2108px){body{font-size:34px}}#header{display:flex;align-items:center;height:6em;padding:0 3em}#header h1{flex-grow:0;flex-shrink:0;font-size:3em;font-family:Knewave;font-weight:400;position:relative;top:-.18em}#header nav{flex-grow:1;text-align:right}#header nav a{display:inline-block;line-height:1.5;padding:0 1em;border-left:1px solid rgba(255,255,255,.5);color:#ffffff80}#header nav .active{color:#fff}#header nav a:first-child{border-left:0}#work>.opening{min-height:24.21875em;padding:3em 10em 3em 3em;display:flex;align-items:center}#work>.opening h2{line-height:1.2em;border-bottom:2px solid white;padding-bottom:.8em}#work>.opening p{line-height:1.6em;max-width:23.25em}#work>.intro{padding:0 3em}#work>section{padding:1.5em 3em;border-bottom:1px solid rgba(255,255,255,.1)}#work>section h3{font-size:2.25em;line-height:2}#work>section>p{padding-right:23.25em;margin-bottom:3em}.article-grid{display:flex;border:1px solid rgba(255,255,255,.5);border-radius:1em;background:linear-gradient(to top,rgba(255,255,255,.03),transparent)}.article-grid article{width:33%;font-size:.8em;padding:1.5em;border-right:1px solid rgba(255,255,255,.5)}.article-grid article h5{color:#fff;font-size:1.1em;line-height:2em}.article-grid article:last-child{border:0}#contact>.opening{min-height:24.21875em;padding:3em;display:flex;align-items:center}#contact>.opening h2{line-height:1.2em;border-bottom:2px solid white;padding-bottom:.8em;margin-bottom:.5em}#contact>.opening li{list-style:none;line-height:2;font-size:1.6em}#contact>.opening li span{line-height:2;font-size:.7em;font-weight:700;color:#ffffff80;text-transform:uppercase;display:inline-block;margin-right:1em}#contact .contact_details{text-align:center}.tag{display:inline-block;line-height:2em;padding:1px;border-radius:1.5em;background:linear-gradient(to bottom,black,transparent);font-size:.8em;margin-right:.3em}.tag span{display:block;padding:0 1em;background:#000;border-radius:1.5em}.language{background:linear-gradient(to right,transparent,rgb(255,53,53))}.language:hover,.language:hover span{background:#ff3535}.framework{background:linear-gradient(to right,transparent,orange)}.framework:hover,.framework:hover span{background:#d48a00}.environment{background:linear-gradient(to right,transparent,rgb(60,196,60))}.environment:hover,.environment:hover span{background:#217821}.infrastructure{background:linear-gradient(to right,transparent,gray)}.infrastructure:hover,.infrastructure:hover span{background:gray}.project_management{background:linear-gradient(to right,transparent,purple)}.project_management:hover,.project_management:hover span{background:puple}.llm{background:linear-gradient(to right,transparent,rgb(60,60,255))}.llm:hover,.llm:hover span{background:#3c3cff}.database{background:linear-gradient(to right,transparent,rgb(255,40,187))}.database:hover,.database:hover span{background:#ff28bb}#experience .opening{min-height:24.21875em;padding:3em;display:flex;align-items:center}#experience .opening>h2{line-height:1.2em;border-bottom:2px solid white;padding-bottom:.8em}#experience article.entry{display:flex;flex-direction:column;min-height:38.75em;border-bottom:1px solid rgba(255,255,255,.1)}#experience article>.header{flex-grow:0;flex-shrink:0;height:10em;padding:0 3em;display:flex;align-items:center}#experience article>.header .title{flex-grow:1;font-weight:100}#experience article>.header .title span{display:block}#experience article>.header .title .year{font-weight:700;text-transform:uppercase;line-height:1;color:#fff6}#experience article>.header>.title .role{font-size:1em;line-height:1.5}#experience article>.header>.title .company{font-size:1em;line-height:1}#experience article>.header>.title .company a{border-bottom:1px dashed rgba(255,255,255,.3)}#experience article>.header .logo{background-repeat:no-repeat;background-size:contain;background-position:center right;width:12em;height:6em}#experience article>.header .logo a{display:block;width:100%;height:100%}.if_insurance .logo{background-image:url(logo_ifinsurance.svg)}.solidatus .logo{background-image:url(logo_solidatus.svg)}.vainu .logo{background-image:url(logo_vainu.svg)}.limejump .logo{mix-blend-mode:screen;background-image:url(logo_limejump_black.png)}.ths .logo{background-image:url(logo_ths.svg)}.touch_surgery .logo{background-image:url(logo_touchsurgery.svg)}.ssh .logo{background-image:url(logo_ssh.svg)}.ecome .logo{background-image:url(logo_ecome.png)}.reactorbox .logo{mix-blend-mode:screen;background-image:url(logo_reactorbox_black.png)}#experience article>.main{flex-grow:1;display:flex}#experience article>.main>.list{flex-grow:0;flex-shrink:0;width:18.75em;padding-left:3em;padding-right:1.5em}#experience article>.main>.list li{line-height:1.6em;font-size:.85em}#experience article>.main>.description{flex-grow:1;padding-right:12.5em}#experience article>.footer{flex-grow:0;flex-shrink:0;height:4em;padding:0 3em}#experience article>.footer>.taglist{display:flex}#experience article>.footer>.taglist h5{flex-grow:0;flex-shrink:0;width:18.75em;line-height:2}#experience article>.footer>.taglist ul{flex-grow:1}#thoughts>.opening{min-height:24.21875em;padding:3em 10em 3em 3em;display:flex;align-items:center}#thoughts>.opening h2{line-height:1.2em;border-bottom:2px solid white;padding-bottom:.8em}#thoughts>.topics{padding:0 10em 10em 3em;position:relative}#thoughts>.topics li{list-style:none;border-bottom:1px solid rgba(255,255,255,.2);line-height:2;font-size:1.3em}.wip{position:absolute;top:0;left:0;right:0;bottom:0;background:#000000e6}.wip h3{background:red;color:#fff;line-height:2em;position:absolute;top:33%;width:100%;transform:rotate(35deg);text-align:center;text-transform:uppercase;font-size:1em}</style>
+  </head>
+  <body id="root">
+    <div id="app">
+      <div id="header"></div>
+      <div id="page"></div>
+    </div>
+    <script>
+      let space = { router: {}, layout: {}, input_events: {} }
+      function join (chn, cid, c) {
+        space[chn] = { ...space[chn], [cid]: c }
+      }
+      function post(chn, msg) {
+        (chn in space) ? Object.values(space[chn]).forEach(f => f(msg)) : console.error(`Channel ${chn} didn't exist`)
+      }
+    </script>
+    <script>
+      (function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))r(i);new MutationObserver(i=>{for(const n of i)if(n.type==="childList")for(const s of n.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&r(s)}).observe(document,{childList:!0,subtree:!0});function o(i){const n={};return i.integrity&&(n.integrity=i.integrity),i.referrerPolicy&&(n.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?n.credentials="include":i.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function r(i){if(i.ep)return;i.ep=!0;const n=o(i);fetch(i.href,n)}})();window.addEventListener("resize",a=>{post("layout",{type:"screen_mode",value:a.target.innerWidth>=900?"desktop":"mobile"})});document.addEventListener("click",({clientX:a,clientY:t})=>post("input_events",{type:"click",coords:[a,t],target:event.target}));function u(a,t){document.getElementById(a).innerHTML=t}function c(a,t){return t&&t.map?t.map(a).join(""):console.error("faulty input for elist",t)}const d=()=>`
+<main id="contact">
+  <section class="opening">
+    <div>
+      <h2>Get in touch!</h2>
+      <p>Need help kickstarting a greenfield side project? <br />Scaling up an existing MVP for production? Get in touch!</p>
+      <ul>
+        <li><span>phone: </span><a href="tel:+358451799000">+358 45 179 9000</a></li>
+        <li><span>mail: </span><a href="mailto:jakeaslin@protonmail.com">jakeaslin@protonmail.com</a></li>
+        <li><span>github: </span><a href="https://github.com/steelheadfly">github.com/steelheadfly</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+`,g=()=>`
+<main id="work">
+  <section class="opening">
+     <h2>Need help kickstarting a greenfield side project? Scaling up an existing MVP for production?</h2>
+  </section>
+  <section class="client">
+    <h3>View Layer</h3>
+    <p>I strongly prefer intermediate mode for layout rendering as it abstracts away a lot of the complexities involved with retained mode. The downside is memoization requirements, but with the right flattened UI structure and atomic subscriptions to event streams, this issue mostly rectified.</p>
+    <div class="article-grid">
+      <article class="react">
+        <h5>React</h5>
+        <p>ReactJS is an open-source JavaScript library for building user interfaces, particularly for single-page applications. React has retained it's #1 position in favourability among UX/UI developers ever since it's inception.</p>
+      </article>
+      <article class="clay">
+        <h5>C-lay</h5>
+        <p>A flex-box style UI auto layout library in C, with declarative syntax and microsecond performance. C-lay is render target agnostic and can output on Canvas, DOM, and other targets native to games and desktop apps.</p>
+      </article>
+      <article class="htmx">
+        <h5>HTMX</h5>
+        <p>A great html -first style UI framework designed to be maintainable by non-programmers who understand a little bit of xml syntax and templating basics. Ideal for small side projects.</p>
+      </article>
+    </div>
+  </section>
+  <section class="be-envs">
+    <h3>Backend & Environments</h3>
+    <p>Choose your preferred backend environment and language.</p>
+    <div class="article-grid">
+      <article class="python">
+        <h5>Python</h5>
+        <p>Python is a interpreted language known for its simplicity and readability, making it an excellent choice for both beginners and experienced developers. It has great interop with lower level languages compensating for it's not as performant core design.</p>
+      </article>
+      <article class="node">
+        <h5>Node (JS|TS)</h5>
+        <p>Node is a flexible, open-source JavaScript runtime built on Chrome's V8 engine that allows developers to execute JavaScript code server-side. It's not ideal for backend development, but will serve in a pinch for small-medium size projects.</p>
+      </article>
+      <article class="node">
+        <h5>.NET (F#, C#)</h5>
+        <p>.NET is the free, open-source, cross-platform framework for building modern apps and powerful cloud services. With large collection of libraries and frameworks, .NET is an ideal choice for UI's projects that target the Windows ecosystem.</p>
+      </article>
+    </div>
+  </section>
+  <section class="databases">
+    <h3>Databases</h3>
+    <p>Datomic is unmatched for business critical data, which requires a higher level of standards in auditability and logging. Mongo and Cassandra serve well as document dumps which require occasional edits. Redis and Valkey work for situations where the data has rapid read/write cycles. A great project will mix/match these different solutions.</p>
+    <div class="article-grid">
+      <article class="datomic">
+        <h5>Datomic</h5>
+        <p>Immutable database that enables reliable auditability and versioning of data over time and performant distributed architecture for horizontal scaling. It separates storage from computation, making it highly adaptable.</p>
+      </article>
+      <article class="mongo-cassandra">
+        <h5>Mongo | Cassandra</h5>
+        <p>NoSQL databases are designed to handle unstructured or semi-structured data with flexibility and scalability. Schema-less data models allow for dynamic and varied data formats.</p>
+      </article>
+      <article class="redis-valkey">
+        <h5>Redis | Valkey</h5>
+        <p>In-memory key-value databases store data as key-value pairs in system memory (RAM), providing extremely fast data access and low latency for applications that require rapid read and write operations.</p>
+      </article>
+    </div>
 
-  </style>
-</head>
+  </section>
+  <section class="management">
+    <h3>Technical Project Management</h3>
+    <p>A great project planning strikes a balance between transparency, flexibility and predictability. All projects start with a general roadmap split into technical tickets that go through <a href="https://fsharpforfunandprofit.com/series/designing-with-types/">functional domain modelling</a> phase to produce a specification that can be trusted. Code structure is then laid out based on atomised tickets with placeholder imports and the end product is displayed in Storybook with automated static exports for visibility and to ensure it comes together ticket by ticket.</p>
+    <div class="article-grid">
+      <article class="storybook">
+        <h5>Storybook</h5>
+        <p>Storybook is an open-source tool for developing and testing UI components in isolation. It allows developers to build and showcase individual components outside of the main application, making it easier to design, test, and document user interfaces.</p>
+      </article>
+      <article class="quodana">
+        <h5>Quodana</h5>
+        <p>Static code analysis by Qodana helps development teams follow agreed quality standards, and deliver readable, maintainable, and secure code. Powered by JetBrains. Quodana has a tiny cost per developer, but is well worth it in the long run.</p>
+      </article>
+      <article class="github-issues">
+        <h5>Github Issues</h5>
+        <p>A more developer friendly alternative to Jira/BitBucket. Visualize large projects as tables, boards, or roadmaps, and automate everything with code.</p>
+      </article>
+    </div>
+  </section>
+  <section class="testing">
+    <h3>Testing Strategies</h3>
+    <p>Alongside the common unit testing and end-to-end solutions, I also like to advocate for adopting few other tools for to maximise reliability without sacrificing too much development time.</p>
+    <div class="article-grid">
+      <article class="pbt">
+        <h5>Property Based Testing</h5>
+        <p>A testing technique where test cases are automatically generated based on properties or general characteristics that the system should always satisfy, rather than using predefined input-output pairs.</p>
+      </article>
+      <article class="semi-automated">
+        <h5>Manual & Semi-automated</h5>
+        <p>Storybook environment has various manual/semi-automated testing solutions that replace the older DOM-crawling legacy solutions like Selenium. This helps reduce QA bottleneck for rapid development.</p>
+      </article>
+      <article class="stress">
+        <h5>Stress testing</h5>
+        <p>Locust is load testing tool that allows developers to simulate thousands of concurrent users and measure the performance of web applications for testing the scalability and performance.</p>
+      </article>
+    </div>
+  </section>
+   <section class="cloud">
+    <h3>Infra & Cloud</h3>
+    <p>Cloud solutions any project needs to thrive. Powerful virtualized computing resources, storage, and networking without the hassle or expense of managing physical hardware.</p>
+    <div class="article-grid">
+      <article class="aws-azure">
+        <h5>AWS | Azure</h5>
+        <p>Azure and AWS radically simplify cloud dev and ops. Azure is great with .NET and AWS works with the rest.</p>
+      </article>
+      <article class="docker">
+        <h5>Docker | Podman</h5>
+        <p>Docker or Podman helps contain the project within an expected set of environment specific variables.</p>
+      </article>
+      <article class="ci-cd">
+        <h5>GH Actions | Azure/AWS Pipelines</h5>
+        <p>Continuous ingeration & Delivery is key to a successful long run software project.</p>
+      </article>
+    </div>
+  </section>
+</main>
+${d()}
 
-<body>
-  <header>
-    Header
-  </header>
-  <main>
-    main
-  </main>
-  <footer>
-    footer
-  </footer>
-</body>
+`,m={label:"JS",type:"language",link:"https://en.wikipedia.org/wiki/JavaScript",description:"Almost as good as livescript ;)"},y={label:"TS",type:"language",link:"https://www.typescriptlang.org/",description:'Unwieldy but might be necessary in some "teams".'},f={label:"PHP",type:"language",link:"https://www.php.net/",description:"Making a comeback in 2026! Or 2027.."},w={label:"Python",type:"language",link:"https://www.python.org/",description:"import numpy as np"},b={label:"C#",type:"language",link:"https://dotnet.microsoft.com/en-us/languages/csharp",description:"PHP of our generation"},v={label:"F#",type:"language",link:"https://fsharp.org/",description:"If only we could.."},k={label:"Clojure",type:"language",link:"https://clojure.org/",description:"Lithpy JVM"},S={label:"ActionScript",type:"language",link:"https://en.wikipedia.org/wiki/ActionScript",description:"A disaster"},A={label:"Odin",type:"language",link:"https://odin-lang.org/",description:"Better C with rank n []*[]"},P={label:"C",type:"language",link:"https://en.wikipedia.org/wiki/C_(programming_language)",description:"I c wat u did there"},J={label:"Node",type:"environment",link:"https://nodejs.org",description:"Not to worry, just got another external hard drive.."},C={label:"DotNet",type:"environment",link:"https://dotnet.microsoft.com/en-us/",description:"Alright then."},T={label:"Java Virtual Machine",type:"environment",link:"https://en.wikipedia.org/wiki/Java_virtual_machine",description:"Let it JIT, Jar Jar Binks"},j={label:"React",type:"framework",link:"https://react.dev/",description:"C# devs escape to reproduce C#++"},x={label:"Angular",type:"framework",link:"https://angular.dev/",description:"Them OOP design patterns"},I={label:"Vue",type:"framework",link:"https://vuejs.org/",description:"Breadcrumbs must be the biggest problem.."},_={label:"D3",type:"framework",link:"https://d3js.org/",description:"Oh no.."},D={label:"Pixi",type:"framework",link:"https://pixijs.com/",description:"Oh yes! But hold on.."},R={label:"Laravel",type:"framework",link:"https://laravel.com/",description:"PHP comeback imminent, just a few more years.."},$={label:"C-lay",type:"framework",link:"https://www.nicbarker.com/clay",description:"A way out. A WAY OUT!"},L={label:"Azure",type:"infrastructure",link:"https://azure.microsoft.com/",description:"..gos, where is my Fang?"},N={label:"AWS",type:"infrastructure",link:"https://aws.amazon.com/",description:"IaaS, look out who rides, so late, through night and wind!"},W={label:"Datomic",type:"database",link:"https://www.datomic.com/",description:"It's how the world works. Low level. Lower than C."},E={label:"MongoDB",type:"database",link:"https://www.mongodb.com",description:"Takeout kebab"},M={label:"Valkey",type:"database",link:"https://valkey.io/",description:"Gentleman's memory palace"},F={label:"Storybook",type:"project_management",link:"https://storybook.js.org/",description:"Story is a story, good or bad. At least we get to hear it."},V={label:"Git",type:"project_management",link:"https://git-scm.com/",description:"Git gaffin or git goin!"},B={label:"Jira",type:"project_management",link:"https://www.atlassian.com/software/jira",description:"Today we talk about Jira.."},O={label:"BitBucket",type:"project_management",link:"https://bitbucket.org/",description:"Those sweet frequent downtimes.."},G={label:"ChatGPT",type:"llm",link:"https://chatgpt.com/",description:"Chat Gippedy"},e={JS:m,TS:y,ActionScript:S,Clang:P,Python:w,Odin:A,CSharp:b,FSharp:v,Clojure:k,PHP:f,NodeJS:J,DotNet:C,JVM:T,Laravel:R,ReactJS:j,AngularJS:x,VueJS:I,D3JS:_,PixiJS:D,Clay:$,Datomic:W,MongoDB:E,Valkey:M,Storybook:F,BitBucket:O,Jira:B,Git:V,Azure:L,AWS:N,ChatGPT:G},q=[{company_id:"if_insurance",year:"2023-2024",role:"Tech Lead",company:"If Insurance",company_link:"https://www.if-insurance.com/",areas:["Software architecture","DotNet 2 migration","AI RnD","Micro front end integrations","Chat client refactor","E-sign & PDF generation"],technologies:[e.JS,e.TS,e.NodeJS,e.ReactJS,e.CSharp,e.DotNet,e.Azure,e.ChatGPT],description:`<p>Served as a tech lead for a squad maintaining client account management app and participated in general architecture improvements, DotNet2 migration efforts, cost cutting endeavours around e-sign, PDF generation, SMS optimisation.</p>
+      <p>Moved into another squad formed around AI RnD and business integration, feature development and contrubuted with major rewrite for existing chat client code.</p>`},{company_id:"solidatus",year:"2021-2022",role:"Senior Software Engineer",company:"Solidatus",company_link:"https://www.solidatus.com/",areas:["Data lineage app redesign & implementation","Software architecture","Data visualisation RnD","Tutoring"],technologies:[e.JS,e.TS,e.NodeJS,e.ReactJS,e.PixiJS,e.D3JS,e.CSharp,e.DotNet,e.AWS],description:`<p>Lead a small group of front end engineers and designers in an effort to redesign and implement the look & feel of a data lineage app including product management work in the form of roadmap, tickets and work order through revisions and deadlines.</p>
+      <p>Was a part of the general software architecture team pushing for improvements through domain driven design and better coordination with micro front ends across different squads.</p>`},{company_id:"vainu",year:"2020-2021",role:"Lead Front End",company:"Vainu",company_link:"https://www.vainu.io/",areas:["Vainu app rewrite","Software architecture","Rest APIs","Product management","Chapter management","Tutoring"],technologies:[e.JS,e.TS,e.NodeJS,e.ReactJS,e.AngularJS,e.D3JS,e.Python,e.AWS],description:`<p>Lead the front end engineering team working on Vainu 2.0 from designs to internal beta and provided technical product management from roadmap with planned execution order down to atomised tickets integrated directly to the project code structure.</p> <p>Introduced a new component centric approach to development leveraging Storybook with frequent static exports (every merge to master) to provide visibility for upper management.</p>
+      <p>Kept biweekly chapter meetings and helped in training & tutoring junior developers alongside the day to day hands-on work.</p>`},{company_id:"limejump",year:"2019-2020",role:"Senior Front End",company:"Limejump",company_link:"https://www.limejump.com/",areas:["Energy trading platform rewrite","Product management","Hiring","Tutoring"],technologies:[e.JS,e.TS,e.NodeJS,e.ReactJS,e.AngularJS,e.D3JS,e.Python,e.AWS],description:`<p>Worked as a principal engineer in efforts to rewrite the energy trading platform from Angular1, jQuery, grunt and gulp task runners to React and Webpack with component centric approach to development leveraging Storybook for visibility between internal stakeholders.</p>
+      <p>Alongside the day to day, I helped with light tutoring, hiring work and customer realtions in startup events.</p>
+      <p>Limejump had a successful exit and was acquired by Shell.</p>`},{company_id:"ths",year:"2018-2019",role:"Lead Front End",company:"THS",company_link:"https://www.thehouseshop.com/",areas:["Rewrites & consolidation","Product management","Front end architecture","Tutoring"],technologies:[e.JS,e.TS,e.NodeJS,e.ReactJS,e.VueJS,e.PHP,e.Laravel,e.AWS],description:"<p>Lead the front-end engineering team in efforts to consolidate various existing web applications into a single unifying UI project. Set up component centric approach to development leaning on Storybook for added transparency between stakeholders.</p>"},{company_id:"touch_surgery",year:"2017-2018",role:"Senior Front End",company:"Touch Surgery",company_link:"https://www.touchsurgery.com/",areas:["Video sharing platform refactor","Features & components"],technologies:[e.JS,e.TS,e.NodeJS,e.ReactJS,e.AWS],description:"<p>Generic role as a senior front end engineer in a scale-up. Principal delivery was to rewrite and reorganise the dom structure to follow responsive design principles.</p><p>Touch Surgery was acquired by Medtronic.</p>"},{company_id:"ssh",year:"2014-2016",role:"Front End",company:"SSH",company_link:"https://www.ssh.com/",areas:["Software architecture","Front end development","Visual design","RnD"],technologies:[e.JS,e.TS,e.NodeJS,e.ReactJS,e.Python,e.AWS],description:`<p>Principal front end engineer and UI/UX designer in a small RnD squad working on next generation SSH firewall.</p>
+      <p>Filed a <a href="https://patents.google.com/patent/US10642455B2/" target="_blank">novelty patent application</a> based on profunctors and graph-style event trace for lightweight screen sharing and remote control across different web devices.</p>
+      <p>The project was acquired by the finnish defense forces for further development.</p>`},{company_id:"ecome",year:"2008-2014",role:"Design & Front End",company:"Ecome",company_link:null,areas:["Co-founder","Front end development","Visual design","Customer relations"],technologies:[e.JS,e.ActionScript,e.AngularJS,e.ReactJS,e.Python,e.PHP],description:"<p>Co-founder in a continuation from previous family business scaling up into a start-up providing SaaS based CRM/CMS, hosting and design-to-web services for small and medium sized advertising agencies.</p>"},{company_id:"reactorbox",year:"2001-2008",role:"Design & Front End",company:"Reactorbox",company_link:null,areas:["Co-founder","Website development","Visual design","IT Support","Customer relations"],technologies:[e.JS,e.ActionScript,e.PHP],description:"<p>Family business between brothers providing website development, some web based apps and hosting.</p>"}],z=({type:a,link:t,label:o,description:r})=>`
+<a target="_blank" class="${`tag ${a}`}" href="${t}" title="${r}">
+  <span>${o}</span>
+</a>
+`,H=({title:a,list:t})=>`
+<ul class="taglist">
+  <h5>${a}</h5>
+  ${c(z,t)}
+</ul>
+`,U=({title:a,list:t})=>`
+<ul class="list">
+  <h5>${a}</h5>
+  ${c(o=>`<li>${o}</li>`,t)}
+</ul>
+`,Q=({year:a,role:t,company:o,areas:r,technologies:i,description:n,company_id:s,company_link:p})=>`
+<article class="${`entry ${s}`}">
+  <div class="header">
+    <div class="title">
+      <span class="year">${a}</span>
+      <h3>
+        <span class="role">${t}</span>
+        <span class="company">@ <a target="_blank" href=${p||"#"}>${o}</a></span>
+      </h3>
+    </div>
+    <div class="logo"><a target="_blank" href=${p}></a></div>
+  </div>
+  <div class="main">
+    ${U({title:"Areas",list:r})}
+    <div class="description">
+      ${n}
+    </div>
+  </div>
+  <div class="footer">
+    ${H({title:"Technologies",list:i})}
+  </div>
+</article>
+`,X=()=>`
+<main id="experience">
+  <section class="opening">
+    <h2>Hard working, flexible and result oriented <br/> software engineer with passion for building<br/> powerful, beautiful and scalable software</h2>
+  </section>
+  ${c(Q,q)}
+</main>
+${d()}
+`,K=[{title:"Discovery & RNG, HoMM III Game Design Retro"},{title:"C-Lay - A Way Forward"},{title:"Micro Frontends and Technical Debt"},{title:"APL: Convenience, Performance & Taste"},{title:"Economic Systems, Revolutions and Compromise"},{title:"Seven Steps: Guide to Algebraic Objects"},{title:"EVE Online Changes I Thought Would Be Interesting"},{title:"Free Monad: The End of Abstraction"},{title:"PBT: On Testing Strategies and the Russian Doll"},{title:"Profunctors and Transactional State"},{title:"Georgist View on Taxes and Rents"},{title:"Bastardising Python"},{title:"WoW Classic Levelling: Firelock"},{title:"On Level Scaling, NWN and Skyrim Design Retro"},{title:"Functors, Mappables, Caches"},{title:"WoW Classic Levelling: Spirit Priest"}],Y=()=>`
+<main id="thoughts">
+ <section class="opening">
+    <h2>Thoughts, ideas, interests mostly around tech, game design and economics. It's nice to write things down sometimes!</h2>
+  </section>
+  <section class="topics">
+    <div class="wip"><h3>Work in progress</h3></div>
+    <ul>
+      ${c(a=>`<li>${a.title}</li>`,K)}
+    </ul>
+  </section>
+</main>
+`,h={work:g,experience:X,thoughts:Y,contact:d,not_found:"<h1>404</h1>"},Z=a=>h[a]||h.not_found,ee=({type:a,route:t})=>u("page",Z(t)());join("router","page",ee);const l=({label:a,link:t,currentRoute:o,target:r})=>`<a class="navlink ${t} ${t===o?"active":"inactive"}" target="${r||"_self"}" onClick="${(s=>`post('router', { type: 'route_change', route: '${s}' })`)(t)}">${a}</a>`,te=({type:a,route:t})=>u("header",`
+<h1>${l({label:"Aslin",link:"work",currentRoute:t})}</h1>
+<nav>
+  ${l({label:"Work",link:"work",currentRoute:t})}
+  ${l({label:"Experience",link:"experience",currentRoute:t})}
+  ${l({label:"Thoughts",link:"thoughts",currentRoute:t})}
+  ${l({label:"Get in touch!",link:"contact",currentRoute:t})}
+  </nav>
+`);join("router","header",te);["router","layout","input_events"].forEach(a=>join(a,"_logger",t=>console.log(a,t)));post("router",{type:"route_change",route:"work"});console.log(space);
+
+    </script>
+  </body>
+</html>
