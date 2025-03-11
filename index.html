@@ -210,7 +210,7 @@
             <ol>
               <li>VDOM tree represented as light-weight readable Abstract Syntax Tree (as a contrast to React's ambient and heavier VDOM objects)</li>
               <li>Device and use specific renderers as interpreters over the AST</li>
-              <li>Instead of finding the difference between old and new VDOM, produce the difference as "transactions" using profunctor composition scheme (similar to Lenses/Prisms)</li>
+              <li>Instead of finding the difference between old and new VDOM, produce the difference as "transactions" using <a href="https://hackage.haskell.org/package/profunctors-5.6.2/docs/Data-Profunctor.html" target="_blank">profunctor</a> composition scheme (similar to Lenses/Prisms as per Kmett's Findings)</li>
               <li>Send the difference as encoded messages through websockets to other clients</li>
               <li>Clients decode the message and apply a controlled AST merge</li>
               <li>Client specific interpreters choose how to repaint the scene as per the new AST</li>
